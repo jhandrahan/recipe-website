@@ -1,11 +1,14 @@
-const RecipeItem = ({ recipeData }) => {
-    return(
-        <li>
-            <h2>{recipeData.title}</h2>
-            <img src={recipeData.image} alt={recipeData.title} />
+import { Link } from "react-router-dom";
 
-        </li>
-    )
-}
+const RecipeItem = ({ recipeData }) => {
+  return (
+    <li>
+      <Link to={`/recipeData/${recipeData.id}`}>
+      <h2>{recipeData.title}</h2>
+      <img src={recipeData.image} alt={recipeData.title} />
+      </Link>
+    </li>
+  );
+};
 
 export default RecipeItem;

@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
 
+
 const Form = () => {
 //initialize state
   const [ recipes, setRecipes ] = useState([]);
@@ -10,7 +11,7 @@ const Form = () => {
 
   const handleClick = (event) => {
     event.preventDefault();
-    // setUserInput("");
+    setUserInput("");
     
     axios({
         baseURL: 'https://api.spoonacular.com/recipes/complexSearch',
