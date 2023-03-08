@@ -10,23 +10,26 @@ const Form = () => {
   const [userInput, setUserInput] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [recipePages, setRecipePages] = useState(false);
 
   const handleClick = (event) => {
     event.preventDefault();
     setUserInput("");
     setLoading(true);
+    setRecipePages(false);
 
     axios({
       baseURL: "https://api.spoonacular.com/recipes/complexSearch",
       params: {
         apiKey: "dbce9eabfd0f437dbcce1553dc251387",
         query: userInput,
-        number: 5,
+        number: 50,
         addRecipeInformation: true,
       },
     }).then((apiData) => {
       setRecipes(apiData.data.results);
       setLoading(false);
+      setRecipePages(true);
 
       if(apiData.data.results.length === 0){
         setError(true);
@@ -58,7 +61,7 @@ const Form = () => {
           />
           <button className="searchBtn">Search</button>
         </form>
-        <Results recipes={recipes} loading={loading} error={error}/>
+        <Results recipes={recipes} loading={loading} error={error} recipePages={recipePages}/>
       </div>
     </>
   );

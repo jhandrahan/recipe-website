@@ -234,6 +234,7 @@ h1 {
   font-family: monospace, monospace;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-size: 6rem;
 }
 
 h2,
@@ -269,7 +270,7 @@ body {
 }
 
 main {
-  min-height: 95vh;
+  min-height: 90vh;
 }
 
 img {
@@ -327,6 +328,29 @@ header h1 {
   box-shadow: 5px 10px 15px #543c52;
 }
 
+.paginationContainer {
+  text-align: center;
+  margin: 35px 0px;
+}
+.paginationContainer span {
+  padding: 10px;
+}
+
+.paginationBtn {
+  border: 2px solid #543c52;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px;
+  background-color: #fff;
+  color: #543c52;
+  transition: 0.3s;
+}
+.paginationBtn:hover, .paginationBtn:focus {
+  background-color: #543c52;
+  color: #fff;
+  cursor: pointer;
+}
+
 section h1 {
   text-align: center;
 }
@@ -359,7 +383,7 @@ section h2 {
 
 .instructionContainer {
   width: 50%;
-  margin-left: 10%;
+  margin-left: 20%;
 }
 .instructionContainer p {
   font-size: 2rem;
