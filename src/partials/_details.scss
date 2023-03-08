@@ -1,0 +1,54 @@
+section{
+    h1{
+        text-align: center;
+    }
+    h2{
+      text-align:start;
+      font-size: 3rem;  
+      margin: 10px 0px;
+    }
+}
+.imageContainer{
+    text-align: center;
+    img{
+        display: inline;
+    }
+}
+.textContainer{
+    display: flex;
+    margin: 50px 0px;
+
+}
+.healthyInfo{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    p{
+        font-size: 2rem;
+    }
+}
+.instructionContainer{
+    width: 50%;
+    margin-left: 10%;
+    p{
+        font-size: 2rem;
+    }
+}
+
+.backBtn{
+    margin-top: 10px;
+    border: 2px solid $secondaryColor;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px;
+    background-color: $solidWhite;
+    color: $secondaryColor;
+    transition: 0.3s;
+    
+    &:hover,
+    &:focus {
+        background-color: $secondaryColor;
+        color: $solidWhite;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,39 @@
+*{
+    padding:0;
+    margin:0;
+}
+html{
+  font-size: 62.5%;
+}
+
+body{
+   background-color: #f1e8e6;
+   font-family: Hind, sans-serif;
+   font-size: 2rem;
+}
+
+main{
+    min-height: 95vh;
+}
+
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+max-width: 1200px;
+width:90%;
+margin:0 auto;
+}
+
+
+
+

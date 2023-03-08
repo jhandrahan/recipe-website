@@ -1,0 +1,39 @@
+form{
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.searchBtn {
+    border: 2px solid $secondaryColor;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px;
+    margin-left: 15px;
+    background-color: $solidWhite;
+    color: $secondaryColor;
+    transition: 0.3s;
+    
+    &:hover,
+    &:focus {
+        background-color: $secondaryColor;
+        color: $solidWhite;
+        cursor: pointer;
+    }
+}
+
+input {
+    width: 500px;
+    margin-left: 10px;
+    line-height: 3.9rem;
+     border: 2px solid $solidWhite;
+
+    &::placeholder{
+        font-size: 20px;
+    }
+
+    &:hover,
+    &:focus{
+        outline: none;
+        border: 2px solid $secondaryColor;
+    }
+}
