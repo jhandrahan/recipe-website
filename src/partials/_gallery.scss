@@ -1,58 +1,58 @@
-.recipeGallery{
+.recipeGallery {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.itemContainer{
-    list-style: none;
-    margin: 25px;
-    padding: 0;
-    box-shadow: 5px 10px 15px grey;
-    h2{
-        padding: 5px;
-    }
-    a{
-        text-decoration: none; 
-        color: $secondaryColor;
-    }
-    img{
-        opacity: 0.85;
-        padding: 5px;
-
-        &:hover,
-        &focus{
-            opacity: 1;
-        }
-    }
+.itemContainer {
+  list-style: none;
+  margin: 25px;
+  padding: 0;
+  box-shadow: 5px 10px 15px grey;
+  h2 {
+    padding: 5px;
+  }
+  a {
+    text-decoration: none;
+    color: $secondaryColor;
+  }
+  img {
+    opacity: 0.85;
+    padding: 5px;
 
     &:hover,
-    &:focus{
-        box-shadow:5px 10px 15px $secondaryColor ;
+    &focus {
+      opacity: 1;
     }
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 5px 10px 15px $secondaryColor;
+  }
 }
 
-.paginationContainer{
-    text-align: center;
-    margin: 35px 0px;
-    span{
-        padding: 10px;
-    }
+.paginationContainer {
+  text-align: center;
+  margin: 35px 0px;
+  span {
+    padding: 10px;
+  }
 }
 .paginationBtn {
-    border: 2px solid $secondaryColor;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 8px;
-    background-color: $solidWhite;
-    color: $secondaryColor;
-    transition: 0.3s;
-    
-    &:hover,
-    &:focus {
-        background-color: $secondaryColor;
-        color: $solidWhite;
-        cursor: pointer;
-    }
+  border: 2px solid $secondaryColor;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px;
+  background-color: $solidWhite;
+  color: $secondaryColor;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $secondaryColor;
+    color: $solidWhite;
+    cursor: pointer;
+  }
 }

@@ -1,23 +1,22 @@
-*{
-    padding:0;
-    margin:0;
+* {
+  padding: 0;
+  margin: 0;
 }
-html{
+html {
   font-size: 62.5%;
 }
 
-body{
-   background-color: #f1e8e6;
-   font-family: Hind, sans-serif;
-   font-size: 2rem;
+body {
+  background-color: $backgroungColor;
+  font-family: Hind, sans-serif;
+  font-size: 2rem;
 }
 
-main{
-    min-height: 90vh;
+main {
+  min-height: 90vh;
 }
 
-
-img{
+img {
   display: block;
   max-width: 100%;
 }
@@ -28,12 +27,8 @@ ul {
   padding: 0;
 }
 
-.wrapper{
-max-width: 1200px;
-width:90%;
-margin:0 auto;
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
 }
-
-
-
-

@@ -1,0 +1,47 @@
+
+@media (max-width: 918px) {
+//Homepage form styles
+  .searchBtn,
+  select {
+    width: 100%;
+    margin: 0;
+    margin-top: 5px;
+  }
+  input {
+    width: 100%;
+    margin: 0;
+
+    &::placeholder {
+      text-align: center;
+    }
+  }
+
+//Detail Page Styles
+  .recipeDetailPageTitle{
+    font-size: 4rem;
+  }
+
+  .textContainer{
+    display: block;
+    margin-top: 25px;
+    .instructionContainer{
+        width: auto;
+        margin: 25px 0px 0px 0px;
+
+    }
+  }
+}
+@media (max-width: 530px){
+    .healthyInfo{
+        display: block;
+        margin: 25px 0px;
+    }
+}
+@media (max-width: 530px){
+    .recipeDetailPageTitle{
+        font-size: 3rem;
+    }
+    .textContainer h2{
+        font-size: 2.5rem;
+    }
+}

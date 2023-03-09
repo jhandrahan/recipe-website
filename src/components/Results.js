@@ -1,24 +1,50 @@
+//imported libraries
 import RecipeItem from "./RecipeItem";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
+//passed down props
 const Results = ({ recipes, loading, error, recipePages }) => {
-  const [pageCounter, setPageCounter] = useState(0)
+  //initialized a piece of state to create pagination
+  const [recipeCounter, setRecipeCounter] = useState(0);
+  const [disable, setDisable] = useState(true);
 
+  //handle click function for the Next Button for pagination
   const handleNextClick = () => {
-    if(pageCounter < recipes.length - 5 ){
-     setPageCounter(pageCounter + 5);  
+    if (recipeCounter < recipes.length - 5) {
+      setRecipeCounter(recipeCounter + 5);
     }
-  }
+  };
 
+  //handle click function for the Back Button for pagination
   const handleBackClick = () => {
-    if(pageCounter !== 0){
-     setPageCounter(pageCounter - 5);
+    if (recipeCounter !== 0) {
+      setRecipeCounter(recipeCounter - 5);
     }
-  }
+  };
+  //used math method to round up page numbers
+  const resultPageNumber = () => {
+    if (recipes.length > 5) {
+      return Math.ceil(recipes.length / 5);
+    } 
+  };
 
-  if(loading){
-    return <h2>Loading...</h2>
+  //disable back button
+  useEffect(() => {
+    if (recipeCounter === 0) {
+      setDisable(false);
+    } else {
+      setDisable(true);
+    }
+  }, [recipeCounter]);
+
+  //conition for page load
+  if (loading) {
+    return <h2>Loading...</h2>;
   }
+  //error handling
+  //using slice method to create pagination
+  //map method to create recipe object
+  //Next and Back Button ternary to appear when needed
   return (
     <>
       <ul className="recipeGallery">
@@ -27,19 +53,26 @@ const Results = ({ recipes, loading, error, recipePages }) => {
             Hmmm... No Recipes Found. Try again with some diffrent key words.
           </p>
         ) : (
-          recipes.slice(pageCounter, pageCounter + 5).map((recipeObject) => {
-            return (
-              <RecipeItem key={recipeObject.id} recipeData={recipeObject} />
-            );
-          })
+          recipes
+            .slice(recipeCounter, recipeCounter + 5)
+            .map((recipeObject) => {
+              return (
+                <RecipeItem key={recipeObject.id} recipeData={recipeObject} />
+              );
+            })
         )}
       </ul>
+
       {recipePages ? (
         <div className="paginationContainer">
-          <button className="paginationBtn" onClick={handleBackClick}>
-            Back
-          </button>
-          <span>{pageCounter / 5 + 1}</span>of<span>{recipes.length / 5}</span>
+          {disable ? (
+            <button className="paginationBtn" onClick={handleBackClick}>
+              Back
+            </button>
+          ) : null}
+          <span>{recipeCounter / 5 + 1}</span>of
+          <span>{resultPageNumber()}</span>
+          
           <button className="paginationBtn" onClick={handleNextClick}>
             Next
           </button>
