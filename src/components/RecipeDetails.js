@@ -15,11 +15,12 @@ const RecipeDetails = () => {
     axios({
       url: `https://api.spoonacular.com/recipes/${uniqueId}/information`,
       params: {
-        apiKey: "2f4e7cc2e89b435f9ca2a22c6b368c9b",
+        apiKey: "838dac08d2a84ba4b8fbc3cbf41c93dd",
       },
     }).then((recipeInfo) => {
       setRecipeInfo(recipeInfo.data);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
